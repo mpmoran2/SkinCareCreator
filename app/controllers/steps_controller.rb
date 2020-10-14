@@ -24,8 +24,16 @@ class StepsController < ApplicationController
     end 
 
     #U
+    def edit
+    end 
+    
+    def create 
+    end
 
     #D
+    def destroy
+    end
+
     private
 
     def grab_routine
@@ -37,6 +45,8 @@ class StepsController < ApplicationController
     end
 
     def validate_routine
-        redirect_to routines_path if !@routine
+        redirect_to routines_path unless grab_routine
     end 
+
+    
 end

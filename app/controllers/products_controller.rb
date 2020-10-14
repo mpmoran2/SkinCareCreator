@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
 
     #R
     def index 
-        @products = Product.all
+        @products = current_user.products
     end
 
     def cleanser
@@ -81,23 +81,33 @@ class ProductsController < ApplicationController
     end
 
     #U
-    #def edit
-    #   @product = Product.find_by(id: params[:id])
-    #end
+    def edit
+      set_product
+    end
 
-    #def update
-    #   @product = Product.find_by(id: params[:id])
-    #   @product.update(product_params)
-    #   redirect_to @product
-    #end
+    def update
+       set_product
+       @product.update(product_params)
+       redirect_to @product
+    end
 
     #D
-    #def destroy
-    #end
+    def destroy
+    end
 
     private 
 
     def product_params
         params.require(:product).permit(:brand, :name, :use_for, :skintype)
     end 
+
+    def not_yours(product)
+        if session[:user_id] != product.user.id 
+          redirect_to oops_path
+        end
+    end
+
+    def set_product
+        @product = Product.find_by(id: params[:id])
+    end
 end

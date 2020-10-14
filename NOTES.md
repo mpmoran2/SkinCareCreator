@@ -48,15 +48,17 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * index ✔
 * new ✔
 * create ✔
-* edit ✘
-* update ✘
+* edit ✔
+* update ✔
 * destroy ✘
 # Model ✔
 * belongs_to :user ✔
 * has_many :steps ✔
 * has_many :routines, through: :steps ✔
 # Routes✔
-* get '/products', to: 'asanas#index' ✔
+* get '/products', to: 'products#index' ✔
+* get '/products/new', to: 'products#new'✘
+* post '/products', to: 'products#create'✘
 # Migrations/db ✔
 * brand
 * name
@@ -64,6 +66,9 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * skintype
 # Views ✔
 * index ✔
+* new
+* edit
+* update
 #
 
 ## Routines
@@ -71,8 +76,7 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * index ✔
 * new ✔
 * create ✔
-* edit 
-* update
+* 
 * destroy
 # Model ✔
 * belongs_to :user ✔
@@ -82,21 +86,21 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * get '/routines', to: 'routines#index' ✔
 * get '/routines/new', to: 'routines#new' ✔
 * post '/routines', to: 'routines#create' ✔
-* get '/routines/edit', to: 'routines#edit'
-* post '/routines', to: 'routines#update'
+
 # Migrations/db✔
-# Views✔
+# Views
 * index ✔
 * new ✔
+* edit
 #
-
 
 ## Steps
 # Controllers
 * new ✔
 * create✔
 * index✔
-* edit
+* edit ✔
+* update 
 * destroy
 # Model✔
 * belongs_to :routine✔
@@ -105,6 +109,9 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * get '/routines/:routine_id/steps', to: 'steps#index' ✔
 * get '/routines/:routine_id/steps/new', to: 'steps#new' ✔
 * post '/steps'. to: 'steps#create' ✔
+* edit
+* update
+* destroy
 # Migrations/db ✔
 # Views ✔
 * new => nested in routine ✔
@@ -140,9 +147,9 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 # Controllers
 * login
 # Routes
-* get '/login', to: 'sessions#login'
-* post '/login', to: 'sessions#login'
-* get '/logout', to: 'sessions#logout'
+* get '/login', to: 'sessions#new'
+* post '/login', to: 'sessions#create'
+* get '/logout', to: 'sessions#destroy'
 # Migrations/db
 # Views
 * login form

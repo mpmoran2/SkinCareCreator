@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   end
   resources :steps, only: :create
 
-  get '/home', to: 'application#home'
-  
+
+  get '/oops', to: 'application#oops'
+
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get '/profile', to: 'users#profile'
   get '/welcome', to: 'users#welcome'
+  
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -37,5 +39,7 @@ Rails.application.routes.draw do
   get 'products/eye_cream', to: 'products#eye_cream'
   get 'products/spf', to: 'products#spf'
   get 'products/ampule', to: 'products#ampule'
+
+  root to: 'application#home' 
   
 end

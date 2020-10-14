@@ -19,12 +19,24 @@ class RoutinesController < ApplicationController
     def index
         @routines = current_user.routines
     end
-    #U
 
+    #U
+   
     #D
+    def destroy
+    end
+
     private 
 
     def routine_params
         params.require(:routine).permit(:name, :skintype)
     end 
+
+    def not_yours(routine)
+        if session[:user_id] != routine.user.id 
+          redirect_to oops_path
+        end
+    end
+
+
 end

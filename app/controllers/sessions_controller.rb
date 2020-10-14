@@ -5,12 +5,15 @@ class SessionsController < ApplicationController
 
     def create 
         @user = User.find_by(username: params[:username])
-        if !@user && @user.authenticate(params[:password])
-            log_in(@user)
-            redirect_to routines_path
-        else
+        if !@user
+            @error = "We're sorry, we can't seem to find you."
+            render :new        
+        elsif !@user.authenticate(params[:password])
             @error = "Woops! Something isn't matching up. Please try again."
             render :new
+        else 
+            log_in(@user)
+            redirect_to profile_path
         end
     end 
     #R
@@ -20,7 +23,7 @@ class SessionsController < ApplicationController
     #D
     def destroy
         session.clear
-        redirect_to home_path
+        redirect_to root_path
     end 
 
 end
