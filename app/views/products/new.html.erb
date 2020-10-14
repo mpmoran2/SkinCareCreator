@@ -1,0 +1,18 @@
+<h2> Add your products </h2>
+
+<%= render partial: '/errors', locals: { record: @product} %>
+
+<%= form_for @product do |f| %>
+    <%= f.label :Brand %>
+    <div><%= f.text_field :brand %></div><br>
+
+    <%= f.label :Name %>
+    <div><%= f.text_field :name %></div><br>
+
+    <%= f.label :Used_as %>
+    <div><%= f.text_field :use_for %></div><br>
+
+    <%= f.label :SkinType %>
+    <div><%= f.text_field :skintype %></div><br><br>
+    <%= f.submit "Add Your Product" %>
+<%end%>

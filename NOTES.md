@@ -35,3 +35,127 @@ b. Error messages describing the validation failures must be present within the 
 ✘ Follow patterns in the Rails Style Guide and the Ruby Style Guide.
 
 Do not use scaffolding to build your project. Your goal here is to learn. Scaffold is a way to get up and running quickly, but learning a lot is not one of the benefits of scaffolding.
+
+# Feature Requests
+* scope method: filter routines by product, time, day(am/pm) and/or skintype
+* model method: return duration of routine based on day and/or product
+* view helper method: converts seconds to min/sec
+* helper method: user log in to view 
+
+# To-Do ✔ ✘
+## Products
+# Controllers
+* index ✔
+* new ✔
+* create ✔
+* edit ✘
+* update ✘
+* destroy ✘
+# Model ✔
+* belongs_to :user ✔
+* has_many :steps ✔
+* has_many :routines, through: :steps ✔
+# Routes✔
+* get '/products', to: 'asanas#index' ✔
+# Migrations/db ✔
+* brand
+* name
+* use_for
+* skintype
+# Views ✔
+* index ✔
+#
+
+## Routines
+# Controllers
+* index ✔
+* new ✔
+* create ✔
+* edit 
+* update
+* destroy
+# Model ✔
+* belongs_to :user ✔
+* has_many :steps ✔
+* has_many :products, throug: :steps✔
+# Routes
+* get '/routines', to: 'routines#index' ✔
+* get '/routines/new', to: 'routines#new' ✔
+* post '/routines', to: 'routines#create' ✔
+* get '/routines/edit', to: 'routines#edit'
+* post '/routines', to: 'routines#update'
+# Migrations/db✔
+# Views✔
+* index ✔
+* new ✔
+#
+
+
+## Steps
+# Controllers
+* new ✔
+* create✔
+* index✔
+* edit
+* destroy
+# Model✔
+* belongs_to :routine✔
+* belongs_to :product✔
+# Routes✔
+* get '/routines/:routine_id/steps', to: 'steps#index' ✔
+* get '/routines/:routine_id/steps/new', to: 'steps#new' ✔
+* post '/steps'. to: 'steps#create' ✔
+# Migrations/db ✔
+# Views ✔
+* new => nested in routine ✔
+* index => nested in routine ✔
+* edit
+* create
+#
+
+## Users
+# Controllers
+* profile
+* signup
+# Model
+* has_many :routines
+* has_many :products 
+# Routes
+* get '/signup', to: 'userw#new'
+* post '/signup', to: 'userw#create'
+* get '/profile', to: 'users#profile'
+* get '/welcome', to: 'user#welcome'
+# Migrations/db ✔
+* name ✔
+* password ✔
+* age✔
+* gender✔
+* skintype✔
+# Views
+* sign up form
+* welcome page
+#
+
+## Sessions
+# Controllers
+* login
+# Routes
+* get '/login', to: 'sessions#login'
+* post '/login', to: 'sessions#login'
+* get '/logout', to: 'sessions#logout'
+# Migrations/db
+# Views
+* login form
+* profile 
+#
+
+
+
+
+
+
+
+
+
+
+

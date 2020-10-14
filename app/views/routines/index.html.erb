@@ -1,0 +1,9 @@
+<h2>Here Are Your Current Skincare Routines</h2>
+<%= link_to "Create New Routine", routines_path %>
+
+<h3>You have <%= @routines.count%> routines</h3>
+<% @routines.each do |routine| %>
+    <h3><%= link_to routine.name, routine_steps_path(routine) %> For <%= routine.skintype %> skin</h3> 
+    <%= format_min(routine.taketime) %>
+    <p><i><%= routine.steps.count %> steps</i> </p>
+<%end%>

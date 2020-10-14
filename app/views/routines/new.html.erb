@@ -1,0 +1,12 @@
+<h2>Let's Create A New Routine</h2>
+
+<%= render partial: '/errors', locals: { record: @routine} %>
+
+<%= form_for @routine do |f| %>
+    <%= f.label :Name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :SkinType %>
+    <%= f.text_field :skintype %><br><br>
+    <%= f.submit "Create Routine and Add Your Steps" %>
+<%end%>

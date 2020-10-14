@@ -1,0 +1,8 @@
+<h2>Routine <%= @routine.name %> </h2>
+<%= link_to "Add Another Step", new_routine_step_path(@routine) %>
+
+<% @routine.steps.each.with_index(1) do |step, index|%>
+    <h3><%= index %>. <%= step.name%></h3>
+    <p><i><%= step.product.brand%>'s</i> <%= step.product.name%> (<%= step.duration %> minutes)</p>
+    
+<%end%>

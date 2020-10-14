@@ -1,0 +1,24 @@
+<h2> Create An Account</h2>
+
+<%= render partial: '/errors', locals: { record: @user} %>
+
+<%= form_for @user, url: signup_path do |f| %>
+    <%= f.label :Username%>
+    <div><%= f.text_field :username %></div><br>
+
+    <%= f.label :Age%>
+    <div><%= f.number_field :age %></div><br>
+
+    <%= f.label :Gender%>
+    <div><%= f.text_field :gender%></div><br>
+
+    <%= f.label :Skintype%>
+    <div><%= f.text_field :skintype %></div><br>
+
+    <%= f.label :Password%>
+    <div><%= f.text_field :password %></div><br>
+    
+    <%= f.label :confirm_password%>
+    <div><%= f.text_field :password_confirmation %></div><br>
+    <%= f.submit %>
+<%end%>
