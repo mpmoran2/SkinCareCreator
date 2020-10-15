@@ -6,3 +6,5 @@
     <p><i><%= step.product.brand%>'s</i> <%= step.product.name%> (<%= step.duration %> minutes)</p>
     <%= link_to "More Info", routine_step_path(@routine, step.id)%>
 <%end%>
+
+<%= button_to "Destroy Your Routine", routine_path(@routine), method: :delete %>
