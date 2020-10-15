@@ -43,22 +43,26 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * helper method: user log in to view 
 
 # To-Do ✔ ✘
-## Products
-# Controllers
+## Products✔
+# Controllers✔
 * index ✔
+* show ✔
 * new ✔
 * create ✔
 * edit ✔
 * update ✔
-* destroy ✘
+* destroy ✔
 # Model ✔
 * belongs_to :user ✔
 * has_many :steps ✔
 * has_many :routines, through: :steps ✔
 # Routes✔
 * get '/products', to: 'products#index' ✔
-* get '/products/new', to: 'products#new'✘
-* post '/products', to: 'products#create'✘
+* get '/products/new', to: 'products#new'✔
+* post '/products', to: 'products#create'✔
+* get '/products/id/edit', to: 'products#edit'✔
+* patch '/products/id', to: 'products#update'✔
+* delete '/product/id', to: 'products#delete'✔
 # Migrations/db ✔
 * brand
 * name
@@ -66,17 +70,17 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * skintype
 # Views ✔
 * index ✔
-* new
-* edit
-* update
+* show ✔
+* new ✔
+* edit✔
+* update✔
 #
 
 ## Routines
 # Controllers
 * index ✔
 * new ✔
-* create ✔
-* 
+* create ✔ 
 * destroy
 # Model ✔
 * belongs_to :user ✔
@@ -86,13 +90,12 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * get '/routines', to: 'routines#index' ✔
 * get '/routines/new', to: 'routines#new' ✔
 * post '/routines', to: 'routines#create' ✔
-
+* delete '/routines/id', to: 'routines#delete
 # Migrations/db✔
-# Views
+# Views✔
 * index ✔
 * new ✔
-* edit
-#
+
 
 ## Steps
 # Controllers

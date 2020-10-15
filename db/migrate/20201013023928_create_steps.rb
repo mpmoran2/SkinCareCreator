@@ -5,6 +5,7 @@ class CreateSteps < ActiveRecord::Migration[6.0]
       t.integer :duration
       t.integer :product_id      
       t.integer :routine_id
+      #t.text :notes
       t.timestamps
     end
   end

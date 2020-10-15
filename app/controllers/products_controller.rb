@@ -20,6 +20,11 @@ class ProductsController < ApplicationController
         @products = current_user.products
     end
 
+    def show
+        current_user
+        set_product
+    end 
+
     def cleanser
         @products = Product.cleanser
         render :index
@@ -93,6 +98,10 @@ class ProductsController < ApplicationController
 
     #D
     def destroy
+        set_product
+        not_yours(@product)
+        @product.destroy
+        redirect_to products_path
     end
 
     private 

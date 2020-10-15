@@ -1,6 +1,6 @@
 <h2> Your Products </h2>
 
-<%= link_to "Add A New Product", routines_path %>
+<%= link_to "Add A New Product", new_product_path %>
 
 <%= link_to "All Products", products_oil_cleanse_path%>
 <%= link_to "Only Oil Cleansers", products_path%>
@@ -17,9 +17,6 @@
 
 
 <% @products.each.with_index(1) do |product, index| %>
-    <h3><%= index %>. <%= product.name%></h3>
-    <p>by <%= product.brand%></p>    
-    <p><%= product.use_for%></p>
-    <p>For <%= product.skintype%></p>
-    
+    <h3><%= index %>. <%= product.name%></h3> 
+    <p><%= product.use_for%> <%= link_to "More Info", product_path(product.id)%></p>   
 <% end %>

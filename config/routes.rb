@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :products, only: [:index, :create, :new]
-  resources :routines, only: [:index, :create, :new] do
-    resources :steps, only: [:index, :new]
+  resources :products
+  resources :routines, only: [:index, :create, :new, :destroy] do
+    resources :steps
   end
-  resources :steps, only: :create
+  
 
 
   get '/oops', to: 'application#oops'

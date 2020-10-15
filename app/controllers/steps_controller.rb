@@ -23,15 +23,34 @@ class StepsController < ApplicationController
         validate_routine  
     end 
 
+    def show
+        @routine = Routine.find_by(id: params[:routine_id])
+        set_step
+    end
+
     #U
     def edit
-    end 
-    
-    def create 
+        @routine = Routine.find_by(id: params[:routine_id]) #grab_routine
+        set_step
     end
+
+    def update
+        grab_routine
+        set_step
+        if @step.update(step_params)
+            redirect_to routine_steps_path(@step.routine)
+        else
+            render :edit
+        end 
+    end 
 
     #D
     def destroy
+        #byebug
+        set_step
+        not_yours(@step)
+        @step.destroy
+        redirect_to routines_path
     end
 
     private
@@ -48,5 +67,17 @@ class StepsController < ApplicationController
         redirect_to routines_path unless grab_routine
     end 
 
-    
+    def set_step
+        @step = Step.find_by(id: params[:id])
+    end
+
+    def set_routine
+        @routine = Routine.find_by(id: params[:step][:routine_id])
+    end
+
+    def not_yours(step)
+        if session[:user_id] != step.routine.user.id
+          redirect_to oops_path
+        end
+    end    
 end

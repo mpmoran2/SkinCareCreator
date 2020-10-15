@@ -2,7 +2,7 @@
 
 <%= render partial: '/errors', locals: { record: @step} %>
 
-<%= form_for @step do |f| %>
+<%= form_for @step, url: routine_steps_path(@routine) do |f| %>
     <%= f.label :Step_in_routine%>
     <div><%= f.text_field :name%></div><br>
 
