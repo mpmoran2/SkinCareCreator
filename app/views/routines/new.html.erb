@@ -7,6 +7,6 @@
     <%= f.text_field :name %><br>
 
     <%= f.label :SkinType %>
-    <%= f.text_field :skintype %><br><br>
+    <div><%= f.select :skintype, options_for_select(["Oily", "Dry", "Normal", "Combo", "Acne Prone", "Mature"])%></div><br>
     <%= f.submit "Create Routine and Add Your Steps" %>
 <%end%>

@@ -4,16 +4,16 @@ Rails.application.routes.draw do
   resources :routines, only: [:index, :create, :new, :destroy] do
     resources :steps
   end
-  
+  resources :users, only: [:show, :edit, :update] 
+
 
 
   get '/oops', to: 'application#oops'
 
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
-  get '/profile', to: 'users#profile'
+ 
   get '/welcome', to: 'users#welcome'
-  
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -41,5 +41,6 @@ Rails.application.routes.draw do
   get 'products/ampule', to: 'products#ampule'
 
   root to: 'application#home' 
+  get '/auth/github/callback'=> 'sessions#create'
   
 end

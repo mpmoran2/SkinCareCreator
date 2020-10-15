@@ -5,5 +5,4 @@
     <h3><%= index %>. <%= step.name%></h3>
     <p><i><%= step.product.brand%>'s</i> <%= step.product.name%> (<%= step.duration %> minutes)</p>
     <%= link_to "More Info", routine_step_path(@routine, step.id)%>
-    <%= link_to "Edit", edit_routine_step_path(@routine, step.id)%>
 <%end%>

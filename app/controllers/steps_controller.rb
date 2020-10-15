@@ -1,7 +1,6 @@
 class StepsController < ApplicationController
     before_action :require_login
 
-    #C
     def new
         grab_routine         
         @step = Step.new
@@ -17,20 +16,19 @@ class StepsController < ApplicationController
         end
     end 
 
-    #R
     def index 
         grab_routine    
         validate_routine  
     end 
 
     def show
-        @routine = Routine.find_by(id: params[:routine_id])
+        grab_routine  
+        @product = Step.find_by(id: params[:product_id])
         set_step
     end
 
-    #U
     def edit
-        @routine = Routine.find_by(id: params[:routine_id]) #grab_routine
+        grab_routine
         set_step
     end
 
@@ -44,9 +42,7 @@ class StepsController < ApplicationController
         end 
     end 
 
-    #D
     def destroy
-        #byebug
         set_step
         not_yours(@step)
         @step.destroy

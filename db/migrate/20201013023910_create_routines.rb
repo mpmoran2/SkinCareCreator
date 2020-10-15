@@ -4,6 +4,7 @@ class CreateRoutines < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.string :name
       t.string :skintype
+      #t.text :notes
       t.timestamps
     end
   end

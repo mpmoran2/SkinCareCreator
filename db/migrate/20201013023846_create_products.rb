@@ -7,7 +7,6 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :use_for
       t.string :skintype
       #t.text :notes
-      #t.string :ya_na
       t.timestamps
     end
   end

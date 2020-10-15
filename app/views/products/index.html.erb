@@ -1,22 +1,25 @@
+
 <h2> Your Products </h2>
 
-<%= link_to "Add A New Product", new_product_path %>
 
-<%= link_to "All Products", products_oil_cleanse_path%>
-<%= link_to "Only Oil Cleansers", products_path%>
-<%= link_to "Only Cleansers", products_cleanser_path%>
-<%= link_to "Only Toners", products_toner_path%>
-<%= link_to "Only Treatements", products_treatement_path%>
-<%= link_to "Only Essences", products_essence_path%>
-<%= link_to "Only Ampule", products_ampule_path%>
-<%= link_to "Only Serums", products_serum_path%>
-<%= link_to "Only Eye Creams", products_eye_cream_path%>
-<%= link_to "Only Moisturizers", products_moisturizer_path%>
-<%= link_to "Only Lip Treatements",products_lip_treat_path%>
-<%= link_to "Only SPf", products_spf_path%>
+
+<%= link_to "All Products", products_oil_cleanse_path%> |
+<%= link_to "Only Oil Cleansers", products_path%> |
+<%= link_to "Only Cleansers", products_cleanser_path%> |
+<%= link_to "Only Toners", products_toner_path%> |
+<%= link_to "Only Treatements", products_treatement_path%> |
+<%= link_to "Only Essences", products_essence_path%> |
+<%= link_to "Only Ampule", products_ampule_path%> |
+<%= link_to "Only Serums", products_serum_path%> |
+<%= link_to "Only Eye Creams", products_eye_cream_path%> |
+<%= link_to "Only Moisturizers", products_moisturizer_path%> |
+<%= link_to "Only Lip Treatements",products_lip_treat_path%> |
+<%= link_to "Only SPF", products_spf_path%>|
 
 
 <% @products.each.with_index(1) do |product, index| %>
     <h3><%= index %>. <%= product.name%></h3> 
     <p><%= product.use_for%> <%= link_to "More Info", product_path(product.id)%></p>   
 <% end %>
+
+|<%= link_to "Add A New Product", new_product_path %>|

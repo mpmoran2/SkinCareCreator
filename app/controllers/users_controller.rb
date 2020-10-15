@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    #C
     def new
         @user = User.new
     end
@@ -14,14 +13,19 @@ class UsersController < ApplicationController
         end
     end
 
-    #R
+    def show        
+        @user =  current_user
+        @routines = Routine.count
+        @products = Product.count
+    end
 
-    #U
+    def welcome
+        @user =  current_user
+    end 
 
-    #D
     private
 
     def user_params
-        params.require(:user).permit(:username, :age, :gender, :password, :password_confirmation)
+        params.require(:user).permit(:username, :password, :password_confirmation)
     end
 end

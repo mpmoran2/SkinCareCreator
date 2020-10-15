@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController  
     before_action :require_login
     
-    #C
     def new
         @product = Product.new
     end
@@ -15,7 +14,6 @@ class ProductsController < ApplicationController
         end
     end 
 
-    #R
     def index 
         @products = current_user.products
     end
@@ -85,7 +83,6 @@ class ProductsController < ApplicationController
         render :index
     end
 
-    #U
     def edit
       set_product
     end
@@ -96,7 +93,6 @@ class ProductsController < ApplicationController
        redirect_to @product
     end
 
-    #D
     def destroy
         set_product
         not_yours(@product)

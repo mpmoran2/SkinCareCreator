@@ -41,9 +41,7 @@ ActiveRecord::Schema.define(version: 2020_10_13_023928) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.integer "age"
-    t.string "gender"
-    t.string "skintype"
+    t.integer "github_uid"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -37,4 +37,4 @@ Step.create(id: 1, name: 'Cleanse', duration: 3, product_id: 1, routine_id: 1)
 Step.create(id: 2, name: 'Tone', duration: 1, product_id: 9, routine_id: 1)
 Step.create(id: 3, name: 'Moisturize', duration: 1, product_id: 2, routine_id: 1)
 
-User.create(id: 1, username: 'hydrangea', age: 29 , gender: 'non-binary', skintype: 'Oily / Acne Prone', password_digest: 'Moontide90')
+User.create(id: 1, username: 'hydrangea', password_digest: 'Moontide90')

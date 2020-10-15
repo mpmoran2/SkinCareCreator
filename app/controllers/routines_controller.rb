@@ -1,7 +1,6 @@
 class RoutinesController < ApplicationController
     before_action :require_login
 
-    #C
     def new
         @routine = Routine.new
     end
@@ -15,14 +14,10 @@ class RoutinesController < ApplicationController
         end
     end 
 
-    #R
     def index
         @routines = current_user.routines
     end
 
-    #U
-   
-    #D
     def destroy
         set_routine
         not_yours(@routine)

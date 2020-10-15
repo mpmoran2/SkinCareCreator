@@ -16,12 +16,5 @@ class Product < ApplicationRecord
     scope :spf, -> {where(use_for: 'SPF')}
     scope :ampule, -> {where(use_for: 'Ampule')}
 
-    scope :oily, -> {where(skintype: 'Oily')}
-    scope :dry, -> {where(skintype: 'Dry')}
-    scope :normal, -> {where(skintype: 'Normal')}
-    scope :combo, -> {where(skintype: 'Combo')}
-    scope :acne, -> {where(skintype: 'Acne Prone')}
-    scope :all_skin, -> {where(skintype: 'All')}
-    scope :mature, -> {where(skintype: 'Mature')}   
     
 end

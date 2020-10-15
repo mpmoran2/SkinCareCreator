@@ -6,9 +6,10 @@
     <div><%= f.text_field :name %></div><br>
 
     <%= f.label :Used_as %>
-    <div><%= f.text_field :use_for %></div><br>
+    <div><%= f.select :use_for, options_for_select(["Cleanser", "Oil Cleanser", "Exfoliator", "Serum", "Essence", "Mask", "Sleeping Mask", "Toner", "Ampule", "Moisturizer", "Lip Treatement", "Treatement", "Eye Cream", "Other"])%></div><br>
 
     <%= f.label :SkinType %>
-    <div><%= f.text_field :skintype %></div><br><br>
+   <div><%= f.select :skintype, options_for_select(["Oily", "Dry", "Normal", "Combo", "Acne Prone", "Mature"])%></div><br>
+
     <%= f.submit "Add Your Product" %>
 <%end%>

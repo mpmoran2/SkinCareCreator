@@ -81,7 +81,7 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * index ✔
 * new ✔
 * create ✔ 
-* destroy
+* destroy✔
 # Model ✔
 * belongs_to :user ✔
 * has_many :steps ✔
@@ -90,7 +90,7 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * get '/routines', to: 'routines#index' ✔
 * get '/routines/new', to: 'routines#new' ✔
 * post '/routines', to: 'routines#create' ✔
-* delete '/routines/id', to: 'routines#delete
+* delete '/routines/id', to: 'routines#delete✔
 # Migrations/db✔
 # Views✔
 * index ✔
@@ -98,13 +98,13 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 
 
 ## Steps
-# Controllers
+# Controllers✔
 * new ✔
 * create✔
 * index✔
 * edit ✔
-* update 
-* destroy
+* update ✔
+* destroy✔
 # Model✔
 * belongs_to :routine✔
 * belongs_to :product✔
@@ -112,51 +112,51 @@ Do not use scaffolding to build your project. Your goal here is to learn. Scaffo
 * get '/routines/:routine_id/steps', to: 'steps#index' ✔
 * get '/routines/:routine_id/steps/new', to: 'steps#new' ✔
 * post '/steps'. to: 'steps#create' ✔
-* edit
-* update
-* destroy
+* edit✔
+* update✔
+* destroy✔
 # Migrations/db ✔
 # Views ✔
 * new => nested in routine ✔
 * index => nested in routine ✔
-* edit
-* create
+* edit✔
+* create✔
 #
 
 ## Users
 # Controllers
-* profile
-* signup
-# Model
-* has_many :routines
-* has_many :products 
-# Routes
-* get '/signup', to: 'userw#new'
-* post '/signup', to: 'userw#create'
-* get '/profile', to: 'users#profile'
-* get '/welcome', to: 'user#welcome'
+* profile✔
+* signup✔
+# Model✔
+* has_many :routines✔
+* has_many :products ✔
+# Routes✔
+* get '/signup', to: 'userw#new'✔
+* post '/signup', to: 'userw#create'✔
+* get '/profile', to: 'users#profile'✔
+* get '/welcome', to: 'user#welcome'✔
 # Migrations/db ✔
 * name ✔
 * password ✔
 * age✔
 * gender✔
 * skintype✔
-# Views
-* sign up form
-* welcome page
+# Views✔
+* sign up form✔
+* welcome page✔
 #
 
 ## Sessions
-# Controllers
-* login
-# Routes
-* get '/login', to: 'sessions#new'
-* post '/login', to: 'sessions#create'
-* get '/logout', to: 'sessions#destroy'
-# Migrations/db
-# Views
-* login form
-* profile 
+# Controllers✔
+* login✔
+# Routes✔
+* get '/login', to: 'sessions#new'✔
+* post '/login', to: 'sessions#create'✔
+* get '/logout', to: 'sessions#destroy'✔
+# Migrations/db✔
+# Views✔
+* login form✔
+* profile ✔
 #
 
 

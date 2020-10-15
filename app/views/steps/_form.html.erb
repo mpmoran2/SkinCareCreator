@@ -1,0 +1,13 @@
+<%= form_for step, url: url do |f| %>
+    <%= f.label :Step_in_routine%>
+    <div><%= f.text_field :name%></div><br>
+
+    <%= f.label :Product_used%>
+   <div><%= f.collection_select :product_id, Product.all, :id,  :name, prompt: true%></div><br>
+
+    <%= f.label :Time_taken_in_minutes%>
+    <div><%= f.number_field :duration%></div><br>
+
+    <%= f.hidden_field :routine_id, value: @routine.id %>
+    <%= f.submit%>
+<%end%>

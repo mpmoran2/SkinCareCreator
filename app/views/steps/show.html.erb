@@ -1,5 +1,11 @@
-<h2> <%= @step.name %></h2>
+<h2> <%= @routine.name %></h2>
+<h3>Step: <%= @step.name %></h3>
 
 
+<%= button_to "Edit", edit_routine_step_path(@routine, @step.id)%>
 
-<%= link_to "Destroy", routine_step_path(@routine, @step), method: :delete %>
+<p><b>Duration:</b> <%= @step.duration%> minutes</p>
+<p><b>Product Used:</b><%= @step.product.name%></p>
+<%# <p><%= @step.notes%></p>
+
+<%= button_to "Destroy", routine_step_path(@routine, @step), method: :delete %>
