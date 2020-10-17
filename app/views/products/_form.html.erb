@@ -9,7 +9,7 @@
     <div><%= f.select :use_for, options_for_select(["Cleanser", "Oil Cleanser", "Exfoliator", "Serum", "Essence", "Mask", "Sleeping Mask", "Toner", "Ampule", "Moisturizer", "Lip Treatement", "Treatement", "Eye Cream", "Other"])%></div><br>
 
     <%= f.label :SkinType %>
-   <div><%= f.select :skintype, options_for_select(["Oily", "Dry", "Normal", "Combo", "Acne Prone", "Mature"])%></div><br>
+   <div><%= f.select :skintype, options_for_select(["Oily", "Dry", "Normal", "Combo", "Acne Prone", "Mature", "All"])%></div><br>
 
     <%= f.submit "Add Your Product" %>
 <%end%>

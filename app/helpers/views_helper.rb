@@ -1,4 +1,6 @@
 module ViewsHelper
+    
+  
 
     def current_page
         User.find_by(id: session[:user_id])

@@ -3,7 +3,7 @@
     <div><%= f.text_field :name%></div><br>
 
     <%= f.label :Product_used%>
-   <div><%= f.collection_select :product_id, Product.all, :id,  :name, prompt: true%></div><br>
+   <div><%= f.collection_select :product_id, user_product, :id, :name, prompt: true%></div><br>
 
     <%= f.label :Time_taken_in_minutes%>
     <div><%= f.number_field :duration%></div><br>
