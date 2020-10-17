@@ -24,62 +24,68 @@ class ProductsController < ApplicationController
     end 
 
     def cleanser
-        @products = Product.cleanser
-        render :index
+        @products = current_user.products.cleanser
+        # if @products = Product.cleanser
+            render :index
+        # else
+        #     @error = "There are no products like this"
+        #     render :index
+        # end
+
     end
 
     def toner 
-        @products = Product.toner
+        @products = current_user.products.toner
         render :index
     end
 
     def mask 
-        @products = Product.mask
+        @products = current_user.products.mask
         render :index
     end
 
     def treatement 
-        @products = Product.treatement
+        @products = current_user.products.treatement
         render :index
     end
     
     def essence 
-        @products = Product.essence
+        @products = current_user.products.essence
         render :index
     end
 
     def serum 
-        @products = Product.serum
+        @products = current_user.products.serum
         render :index
     end
 
     def moisturizer 
-        @products = Product.moisturizer
+        @products = current_user.products.moisturizer
         render :index
     end
 
     def oil_cleanse
-        @products = Product.oil_cleanse
+        @products = current_user.products.oil_cleanse
         render :index
     end
 
     def lip_treat 
-        @products = Product.lip_treat
+        @products = current_user.products.lip_treat
         render :index
     end
 
     def eye_cream 
-        @products = Product.eye_cream
+        @products = current_user.products.eye_cream
         render :index
     end
 
     def spf 
-        @products = Product.spf
+        @products = current_user.products.spf
         render :index
     end
 
     def ampule   
-        @products = Product.ampule
+        @products = current_user.products.ampule
         render :index
     end
 

@@ -16,6 +16,8 @@
 <%= link_to "Only Lip Treatements", lip_treats_path%> |
 <%= link_to "Only SPF", spfs_path%>|
 
+<p><i><%= @error %></i></p>
+
 
 <% @products.each.with_index(1) do |product, index| %>
     <h3><%= index %>. <%= product.name%></h3> 
