@@ -15,8 +15,8 @@ class UsersController < ApplicationController
 
     def show        
         @user =  current_user
-        @routines = Routine.count
-        @products = Product.count
+        @routines = current_user.routines.count
+        @products = current_user.products.count
     end
 
     def welcome
