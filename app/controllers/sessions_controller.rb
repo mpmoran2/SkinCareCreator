@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
                 render :new
             else 
                 log_in(@user)
-                redirect_to profile_path
+                redirect_to user_path(@user.id)
             end 
         end
     end 
