@@ -2,7 +2,7 @@
 <h3>Step: <%= @step.name %></h3>
 
 
-<%= button_to "Edit", edit_routine_step_path(@routine, @step.id)%>
+<%= link_to "Edit", edit_routine_step_path(@routine, @step.id)%>
 
 <p><b>Duration:</b> <%= @step.duration%> minutes</p>
 <p><b>Product Used:</b><%= @step.product.name%></p>
