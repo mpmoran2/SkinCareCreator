@@ -3,12 +3,15 @@ class ApplicationController < ActionController::Base
     helper UserProductHelper
 
     def home
-    end
-
-  
+    end  
 
     def current_user
-        User.find_by(id: session[:user_id])
+        if @current_user.nil?
+            @current_user = User.find_by(id: session[:user_id])
+        else
+            @current_user
+        end 
+        #@current_user ||= User.find_by(id: session[:user_id])   
     end
 
     def require_login

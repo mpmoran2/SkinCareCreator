@@ -15,6 +15,5 @@ class Product < ApplicationRecord
     scope :eye_cream, -> {where(use_for: 'Eye Cream')}
     scope :spf, -> {where(use_for: 'SPF')}
     scope :ampule, -> {where(use_for: 'Ampule')}
-
     
 end
