@@ -4,12 +4,14 @@
 
     <%= f.label :Name %>
     <div><%= f.text_field :name %></div><br>
+    <%# check box with "New" "Holy Grail" "Like" "Dislike" %>
 
     <%= f.label :Used_as %>
     <div><%= f.select :use_for, options_for_select(["Cleanser", "Oil Cleanser", "Exfoliator", "Serum", "Essence", "Mask", "Sleeping Mask", "Toner", "Ampule", "Moisturizer", "Lip Treatement", "Treatement", "Eye Cream", "Other"])%></div><br>
 
     <%= f.label :SkinType %>
    <div><%= f.select :skintype, options_for_select(["Oily", "Dry", "Normal", "Combo", "Acne Prone", "Mature", "All"])%></div><br>
+   <%# product notes %>
 
     <%= f.submit "Add Your Product" %>
 <%end%>
